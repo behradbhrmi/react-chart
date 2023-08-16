@@ -1,0 +1,581 @@
+/*background-color*/
+
+#goToTop:hover,
+.eu-cookie-bar-notification button:hover,
+.eu-cookie-bar-notification a:hover,
+.header-logo a img,
+.footer-menu a:hover:before,
+.social-sharing a:hover,
+.poll .buttons input:hover,
+.block .list a:hover:before,
+.block .list .active a:before,
+.block .list .sublist > .inactive:hover a:before,
+.pager li a:hover,
+.pager li span,
+.vendor-list a:hover,
+.contact-vendor button:hover,
+.overview .add-to-cart-button:hover,
+.overview .add-to-wishlist-button:hover,
+.variant-overview .add-to-wishlist-button:hover,
+.overview .add-to-compare-list-button:hover,
+.overview .email-a-friend-button:hover,
+.overview .subscribe-button:hover,
+.download-sample a:hover,
+.variant-overview .add-to-cart-button:hover,
+.attributes .qq-upload-button,
+.mfp-container .apply-shipping-button:hover,
+.write-review .button-1:hover,
+.wishlist-content .button-2:hover,
+.compare-products-page .button-2:hover,
+.enter-password-form button:hover,
+.contact-page .button-1:hover,
+.email-a-friend-page .button-1:hover,
+.apply-vendor-page .button-1:hover,
+.registration-page .button-1:hover,
+.registration-result-page .button-1:hover,
+#check-availability-button:hover,
+.login-page .button-1:hover,
+.password-recovery-page .button-1:hover,
+.account-page .button-1:hover,
+.account-page .edit-address-button:hover,
+.account-page .order-details-button:hover,
+.account-page .delete-address-button:hover,
+.account-page .return-items-button:hover,
+.order-details-page .page-title a:hover .return-request-page .button-1:hover,
+.account-page .delete-selected-biss-button:hover,
+.avatar-page button.upload-avatar-button,
+.shopping-cart-page .button-1:hover,
+.checkout-page .button-1:hover,
+.shopping-cart-page .button-2:hover,
+.checkout-page .button-2:hover,
+.estimate-shipping-button:hover,
+.checkout-attributes .qq-upload-button,
+.return-request-file .qq-upload-button,
+.order-details-page .actions button:hover,
+.search-input .button-1:hover,
+.blog-page .tags a:hover,
+.blogpost-page .tags a:hover,
+.new-comment .button-1:hover,
+.news-list-page .news-items .read-more:hover,
+.topic-post .pm-link-button:hover,
+.profile-info-box .pm-link-button:hover,
+.forum-edit-page .buttons button:hover,
+.move-topic-page .buttons button:hover,
+.private-message-send-page .buttons button:hover,
+.private-messages-page .buttons button:hover,
+.private-message-view-page .buttons button:hover,
+.ajaxCart .productAddedToCartWindowCheckout:hover,
+.mega-menu .box li a:hover:before,
+.jCarouselMainWrapper .slick-prev:hover,
+.jCarouselMainWrapper .slick-next:hover,
+.jCarouselMainWrapper .slick-dots .slick-active button,
+.previous-product a:hover,
+.next-product a:hover,
+.ropc button:hover,
+.rich-blog-homepage .view-all a:hover,
+.post-actions .read-more:hover,
+.blog-search-results li a:hover:before,
+.post-navigation a:hover,
+.nivo-controlNav a.active,
+.anywhere-slider .slick-active button,
+.sale-of-the-day-offer .owl-controls .owl-dot.active span,
+.inputs.upload .k-button.k-upload-button span,
+.page-body form > .buttons .k-button:hover,
+.k-edit-buttons.k-state-default button.k-dialog-insert.k-button,
+#submit-reply .buttons .k-button:hover,
+.my-tickets-page .clear-filters:hover,
+.manage-tickets-page .clear-filters:hover,
+.k-widget.confirmation-wrapper button,
+.overview .submit-ticket-button:hover {
+  background-color: #000846;
+}
+.ui-slider-handle,
+.k-pager-numbers span.k-state-selected {
+  background-color: #000846 !important;
+}
+/*color*/
+
+.field-validation-valid,
+.footer-menu a:hover,
+.footer-tax-shipping a:hover,
+.footer-powered-by a,
+.footer-designed-by a,
+.titles ul li.active span,
+.home-page-listbox .actual-price,
+.block .list a:hover,
+.block .list .active > a,
+.block .list a.active,
+.block .view-all a,
+.block .tags li a:hover,
+.product-tags-all-page li a:hover,
+.breadcrumb h1,
+.breadcrumb strong,
+.item-box .actual-price,
+.tax-shipping-info a:hover,
+.overview .value,
+.variant-overview .value,
+.product-review-links a:hover,
+.product-no-reviews a:hover,
+.overview .product-price,
+.variant-overview .product-price,
+.customer-entered-price .price-range,
+.ui-tabs .ui-tabs-nav li:hover a,
+.product-tags-list li a:hover,
+.ui-datepicker-calendar td a:hover,
+.ui-datepicker-calendar .ui-datepicker-today,
+.product-reviews-page h1 a,
+.product-review-item .review-info a,
+.wishlist-page .share-info a:hover,
+.compare-products-page .clear-list:hover,
+.topic-block a:hover,
+.topic-page a:hover,
+.email-a-friend-page .title a:hover,
+.registration-result-page .result,
+.login-page .inputs.reversed .forgot-password a:hover,
+.account-page .button-2:hover,
+.order-details-page .page-title a:hover,
+.return-request-list-page a:hover,
+.order-total-price .cart-total-right,
+.cart-total .order-total,
+.terms-of-service span:hover,
+.cart-collaterals .current-code,
+.opc .back-link a:hover,
+.order-details-page .data-table a:hover,
+.order-details-page td.total,
+.return-request-page td.price,
+.sitemap-page a:hover,
+.post-date,
+.news-date,
+.blog-posts .buttons a:hover,
+.new-comment .result,
+.comment-time,
+.news-list-homepage .news-items .news-date,
+.news-list-homepage .news-items .read-more,
+.current-time,
+.search-box.forum-search-box .advanced a,
+.forums-table-section .view-all,
+.forum-page .actions a:hover,
+.forum-breadcrumb li:last-child a,
+.forum-topic-page .topic-actions a:hover,
+.topic-footer .topic-actions a:hover,
+.topic-post .username:hover,
+.topic-post .post-head a:hover,
+.profile-page .topic-title a:hover,
+.profile-page .topic-data,
+.cart a:hover,
+.data-table a:hover,
+.compare-products-table a:hover,
+.forums-table-section a:hover,
+.cart .subtotal,
+.compare-products-table .product-price td,
+.tier-prices .item-price,
+.ajaxCart .k-window-titlebar.k-header .k-window-actions a:hover,
+.productAddedToCartWindowDescription strong,
+.productAddedToCartWindowSummary a:hover,
+.filter-block a.clearFilterOptions:hover,
+.filter-block a.clearPriceRangeFilter:hover,
+.selected-options-list > li span,
+.ajaxFilters .k-window-actions .k-icon:hover,
+.filter-block a.toggleControl,
+.filtersGroupPanel li.checked label,
+.filtersGroupPanel li > label:hover,
+.instant-search-item .detail .price,
+.mega-menu .box li a:hover,
+.quickView .k-window-titlebar.k-header .k-window-actions a:hover,
+.quickViewWindow .links-panel a:hover,
+.quickViewWindow .variant-info .product-price,
+.sale-of-the-day-offer .product-name a,
+.sale-of-the-day-offer .price.actual-price,
+.rich-blog-homepage .blog-post .read-more,
+.blog-instant-search .k-item.k-state-hover,
+.rich-blog-autocomplete-last-item span,
+.blog-search-results-page .search-term-highlighter,
+.blog-instant-search .k-item.k-state-focused,
+.blog-page .buttons .read-comments,
+.blog-search-results li a:hover,
+.post-footer a,
+.category-description a:hover,
+.manufacturer-description a:hover,
+.full-description a:hover,
+.topic-html-content a:hover,
+.post-body a:hover,
+.news-body a:hover,
+.custom-tab a:hover,
+.order-details-page .product .submit-ticket-button,
+ul#TicketModelTicketProductIds_taglist li.k-button,
+#TicketProducts_taglist li.k-button,
+ul#product-field_taglist li.k-button,
+#customer-field_taglist li.k-button,
+.ticket-comments .comment-header .left a,
+.ticket-comments .comment-body a,
+.ticket-comments .attachment-content li {
+  color: #000846;
+}
+/*border-color*/
+
+#goToTop:hover,
+.eu-cookie-bar-notification button:hover,
+.eu-cookie-bar-notification a:hover,
+.poll .buttons button,
+.item-box button,
+.vendor-list a:hover,
+.contact-vendor button:hover,
+.gallery .picture-thumbs a:hover,
+.overview .add-to-wishlist-button:hover,
+.variant-overview .add-to-wishlist-button:hover,
+.overview .add-to-compare-list-button:hover,
+.overview .email-a-friend-button:hover,
+.overview .subscribe-button:hover,
+.download-sample a:hover,
+.overview .add-to-cart-button,
+.variant-overview .add-to-cart-button,
+.mfp-container .apply-shipping-button,
+.write-review .button-1,
+.wishlist-content .button-2:hover,
+/*.wishlist-content .wishlist-add-to-cart-button,*/ .compare-products-page .button-2:hover,
+.enter-password-form button:hover,
+.contact-page .button-1,
+.email-a-friend-page .button-1,
+.apply-vendor-page .button-1,
+.registration-page .button-1,
+.registration-result-page .button-1,
+#check-availability-button,
+.login-page .button-1,
+.password-recovery-page .button-1,
+.account-page .button-1,
+.return-request-page .button-1,
+.account-page .delete-selected-biss-button:hover,
+.order-progress li.active-step a:before,
+.shopping-cart-page .button-1:hover,
+.checkout-page .button-1:hover,
+.shopping-cart-page .button-2:hover,
+.checkout-page .button-2:hover,
+.estimate-shipping-button:hover,
+.cart-footer .button-1,
+.checkout-page button[type='submit'],
+.confirm-order .button-1,
+#checkout-step-confirm-order .buttons .button-1,
+.order-details-page .actions button:hover,
+.search-input .button-1,
+.blog-page .tags a:hover,
+.blogpost-page .tags a:hover,
+.new-comment .button-1,
+.news-list-page .news-items .read-more:hover,
+.topic-post .pm-link-button:hover,
+.profile-info-box .pm-link-button:hover,
+.forum-edit-page .buttons button:hover,
+.move-topic-page .buttons button:hover,
+.private-message-send-page .buttons button:hover,
+.private-messages-page .buttons button:hover,
+.private-message-view-page .buttons button:hover,
+.forum-edit-page .buttons button[type="submit"],
+.move-topic-page .buttons button[type="submit"],
+.private-messages-page .buttons button[type="submit"],
+.private-message-send-page .buttons button[type="submit"],
+.private-message-view-page .buttons button.button-1,
+.ajaxCart .productAddedToCartWindowCheckout,
+.mega-menu .dropdown,
+.previous-product a:hover,
+.next-product a:hover,
+.user-agreement-page .button-1,
+.ropc button:hover,
+.complete-button button,
+.rich-blog-homepage .view-all a:hover,
+.post-actions .read-more:hover,
+.post-navigation a:hover,
+.page-body form > .buttons .k-button,
+#submit-reply .buttons .k-button,
+.my-tickets-page .clear-filters,
+.manage-tickets-page .clear-filters,
+.slick-dots button,
+.overview .submit-ticket-button:hover {
+  border-color: #000846;
+}
+.k-pager-numbers span.k-state-selected {
+  border-color: #000846 !important;
+}
+/*Desktop Schemes*/
+
+@media all and (min-width: 1025px) {
+  /*background-color*/
+  
+  .ico-inbox .inbox-unread,
+  .header-menu .sublist li:hover > a:before,
+  .wishlist-qty,
+  .cart-qty,
+  .mini-shopping-cart button:hover,
+  .header-menu > ul > li:hover > a:before,
+  .header-menu > ul > li:hover > span:before,
+  .header-menu .sublist-wrap:after,
+  .product-grid .item-box .buttons button:hover,
+  .product-list .item-box .add-info button:hover,
+  .sale-of-the-day-offer .go-to-product-page:hover {
+    background-color: #000846;
+  }
+  /*color*/
+  
+  .cart-sum,
+  .mini-shopping-cart .count a,
+  .mini-shopping-cart .price span,
+  .mini-shopping-cart .quantity span,
+  .mini-shopping-cart .totals strong,
+  .header-menu > ul > li > a:hover,
+  .header-menu > ul > li > span:hover,
+  .header-menu .sublist li:hover > a {
+    color: #000846;
+  }
+  /*border-color*/
+  
+  .mini-shopping-cart button:hover,
+  .product-grid .item-box .buttons button:hover,
+  .sale-of-the-day-offer .picture-thumbs a:hover,
+  .sale-of-the-day-offer .go-to-product-page:hover {
+    border-color: #000846;
+  }
+}
+:root {
+    --one-color : #56CCF2;
+    --two-color: #F2C94C;
+    --three-color: #6FCF97;
+    --one-color-btn: #2F80ED;
+    --two-color-btn: #F2994A;
+    --three-color-btn: #27AE60;
+}
+
+.top-menu {
+    display: none;
+}
+.header {
+margin:auto;
+background-color:#000846;
+width: auto;
+}
+.breadcrumb {
+    display: none;
+}
+
+.filtersPanel {
+    display: none;
+}
+
+.html-category-page .side-2{
+  display: none
+}
+.grid-navigation {
+    display: none;
+}
+.item-grid {
+    width: 135%;
+    margin-left: -27%;
+}
+html :not(:dir(rtl)) .item-grid {   
+    margin-left: -27%;
+}
+html :dir(rtl) .item-grid {   
+    margin-right: -25%;
+}
+.html-category-page  .footer-middle{
+  display: none;
+}
+.html-shopping-cart-page .footer-middle{
+  display: none;
+}
+.html-checkout-page .footer-middle{
+  display: none;
+}
+.item-box {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    width: 350px;
+    height: 625px;
+    position: relative;
+    text-align: center;
+}
+
+.head-parent {
+    background-image: url("../../../../Plugins/Finitx.Plugin.Widgets.ProductBadges/Views/Home/assets/header.png");
+    height: 350px;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+    justify-content: space-between;
+}
+.html-category-page .master-wrapper-content{
+  padding: 0;
+}
+
+.sub-header {
+    background-image: url("../../../../Plugins/Finitx.Plugin.Widgets.ProductBadges/Views/Home/assets/header.png");
+    height: 350px;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+    justify-content: space-between;
+}
+.logo {
+    opacity: .5;
+}
+
+
+.item-box:nth-child(3n+1) .head-rect {
+    background-color: var(--one-color);
+box-shadow: 0px 0px 10px 0px var(--one-color);
+}
+
+.item-box:nth-child(3n+2) .head-rect {
+    background-color: var(--two-color);
+box-shadow: 0px 0px 10px 0px var(--two-color);
+}
+
+.item-box:nth-child(3n+0) .head-rect {
+    background-color: var(--three-color);
+box-shadow: 0px 0px 10px 0px var(--three-color);
+}
+
+.item-box:nth-child(3n+1) .product-box-add-to-cart-button {
+    background-color: var(--one-color-btn);
+    color: aliceblue;
+}
+
+.item-box:nth-child(3n+2) .product-box-add-to-cart-button {
+    background-color: var(--two-color-btn);
+    color: aliceblue;
+}
+
+.item-box:nth-child(3n+0) .product-box-add-to-cart-button {
+    background-color: var(--three-color-btn);
+    color: aliceblue;
+}
+
+.item-box:nth-child(3n+1) {
+    border-color: var(--one-color);
+}
+
+.item-box:nth-child(3n+2) {
+    border-color: var(--two-color);
+}
+
+.item-box:nth-child(3n+0) {
+    border-color: var(--three-color);
+}
+
+.item-box:nth-child(3n+1) .prices{
+color:var(--one-color);
+}
+.item-box:nth-child(3n+2) .prices{
+color:var(--two-color);
+}
+
+.item-box:nth-child(3n+0) .prices{
+color:var(--three-color);
+}
+.product-box-add-to-cart-button {
+    border: 0 !important;
+    border-radius: 50px;
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    border: 0px;
+}
+
+.product-box-add-to-cart-button:hover {
+    border: 1px solid #459f61;
+    font-size: 2rem;
+}
+.product-title{
+font-size: 40px ;
+}
+.new_description{
+margin-inline:36px;
+text-align: justify;
+font-size:17px;
+ height: 50px;
+}
+.head-rect {
+    width: 130%;
+    height: 35%;
+    position: absolute;
+    border-radius: 0% 0% 50% 50%;
+    margin-inline:-15%;
+}
+
+.details>h2 a {
+    text-align: center;
+}
+
+.product-title {
+    margin-top: 5%
+}
+
+
+
+.product-attributes-main {   
+    margin-bottom: 20px;   
+}
+.product-attributes-main >dl{
+  height: 150px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.customer-header-links > ul >li {
+  color: white
+}
+.header-right{
+  color: white
+}
+ .dollar_sign {      
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        font-feature-settings: "tnum" on,"lnum" on;      
+    }
+
+    .period_price {
+        font-feature-settings: "tnum" on,"lnum" on;
+        display: flex;
+        flex-direction: column;
+        font-family: -apple-system,BlinkMacSystemFont,Trebuchet MS,Roboto,Ubuntu,sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        justify-content: flex-end;
+        line-height: 18px;
+        margin: 0 0 10px 7px;
+        position: relative;     
+        margin-bottom: 0px;
+        letter-spacing: 1px;
+    }
+.prices {
+font-size:25px;
+ margin-top: 25% !important;
+}
+.product-attributes-main >dl{
+  height: 175px;
+  text-align: justify;
+  margin-inline: 63px;
+}
+.productQuantityDropdown{
+display:none;
+}
+.html-login-page .topic-block{
+  display: none;
+}
+.result{
+  padding: 20px;
+}
+.html-checkout-page .payment-logo img{
+  width: 50px;
+  height: 50px;  
+}
+.html-checkout-page .payment-method li{
+  display: inline-block
+}
+.product-box-add-to-cart-button{
+margin:auto;
+}
+.ajaxCart img{
+ display: none;
+}

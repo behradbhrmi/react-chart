@@ -1,0 +1,51 @@
+﻿@model SocialModel
+
+@using Nop.Core
+@using Nop.Services.Configuration
+
+@inject IStoreContext storeContext
+@inject IWorkContext workContext
+@inject ISettingService settingService
+
+@{
+    var storeId = (await storeContext.GetCurrentStoreAsync()).Id;
+    var workingLanguageId = (await workContext.GetWorkingLanguageAsync()).Id;
+    var pinterestUrl = await settingService.GetSettingByKeyAsync("nativethemesettings.pinteresturl", String.Empty, storeId, true);
+    var vimeoUrl = await settingService.GetSettingByKeyAsync("nativethemesettings.vimeourl", String.Empty, storeId, true);
+    var instagramUrl = await settingService.GetSettingByKeyAsync("nativethemesettings.instagramurl", String.Empty, storeId, true);
+    var facebookUrl = await settingService.GetSettingByKeyAsync("storeinformationsettings.facebooklink", String.Empty, storeId, true);
+    var twitterUrl = await settingService.GetSettingByKeyAsync("storeinformationsettings.twitterlink", String.Empty, storeId, true);
+    var youtubeUrl = await settingService.GetSettingByKeyAsync("storeinformationsettings.youtubelink", String.Empty, storeId, true);
+    var newsEnabled = await settingService.GetSettingByKeyAsync("newssettings.enabled", false, storeId, true);
+}
+
+<ul class="social-sharing">
+    @if (!string.IsNullOrEmpty(facebookUrl))
+    {
+        <li><a href="@facebookUrl" class="facebook" target="_blank" rel="noopener noreferrer" aria-label="@T("Footer.FollowUs.Facebook")"></a></li>
+    }
+    @if (!string.IsNullOrEmpty(twitterUrl))
+    {
+        <li><a href="@twitterUrl" class="twitter" target="_blank" rel="noopener noreferrer" aria-label="@T("Footer.FollowUs.Twitter")"></a></li>
+    }
+    @if (!string.IsNullOrEmpty(youtubeUrl))
+    {
+        <li><a href="@youtubeUrl" class="youtube" target="_blank" rel="noopener noreferrer" aria-label="@T("Footer.FollowUs.Youtube")"></a></li>
+    }
+    @if (!string.IsNullOrEmpty(pinterestUrl))
+    {
+        <li><a href="@pinterestUrl" class="pinterest" target="_blank" rel="noopener noreferrer" aria-label="@T("SevenSpikes.Themes.Native.Common.Footer.FollowUs.Pinterest")"></a></li>
+    }
+    @if (!string.IsNullOrEmpty(vimeoUrl))
+    {
+        <li><a href="@vimeoUrl" class="vimeo" target="_blank" rel="noopener noreferrer" aria-label="@T("SevenSpikes.Themes.Native.Common.Footer.FollowUs.Vimeo")"></a></li>
+    }
+    @if (!string.IsNullOrEmpty(instagramUrl))
+    {
+        <li><a href="@instagramUrl" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="@T("SevenSpikes.Native.Venture.Common.Footer.FollowUs.Instagram")"></a></li>
+    }
+    @if (newsEnabled)
+    {
+        <li><a class="rss" href="@Url.RouteUrl("NewsRSS", new { languageId = workingLanguageId })" aria-label="@T("Footer.FollowUs.RSS")"></a></li>
+    }
+</ul>

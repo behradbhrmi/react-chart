@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Root";
+}
+@section BreadcrumbTopRoot
+{
+    @if (IsSectionDefined("BreadcrumbTop"))
+    {
+        @RenderSection("BreadcrumbTop");
+    }
+}
+
+<div class="center-1">
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MainColumnBefore })
+    @RenderBody()
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MainColumnAfter })
+</div>

@@ -1,0 +1,78 @@
+﻿@model TopMenuModel
+
+@using Nop.Web.Framework.Themes
+
+@inject IThemeContext themeContext
+
+@{
+
+    var isRtl = await this.ShouldUseRtlThemeAsync();
+
+    var theme = await themeContext.GetWorkingThemeNameAsync();
+}
+
+<input type="hidden" value="@isRtl.ToString().ToLowerInvariant()" id="isRtlEnabled" />
+
+<ul class="top-menu">
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMenuBefore })
+    @if (Model.DisplayHomepageMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("Homepage")"><span>@T("Homepage")</span></a></li>
+    }
+    @{
+        var rootCategories = Model.Categories.Where(x => x.IncludeInTopMenu).ToList();
+    }
+
+    @foreach (var category in rootCategories)
+    {
+        var categoryLineModel = new TopMenuModel.CategoryLineModel
+        {
+            Category = category
+        };
+        @await Html.PartialAsync("_CategoryLine.TopMenu", categoryLineModel)
+    }
+    @foreach (var topic in Model.Topics)
+    {
+        <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
+    }
+    @if (Model.NewProductsEnabled && Model.DisplayNewProductsMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("NewProducts")"><span>@T("Products.NewProducts")</span></a></li>
+    }
+    @if (Model.DisplayProductSearchMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("ProductSearch")"><span>@T("Search")</span></a></li>
+    }
+    @if (Model.DisplayCustomerInfoMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("CustomerInfo")"><span>@T("Account.MyAccount")</span></a></li>
+    }
+    @if (Model.BlogEnabled && Model.DisplayBlogMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("Blog")"><span>@T("Blog")</span></a></li>
+    }
+    @if (Model.ForumEnabled && Model.DisplayForumsMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("Boards")"><span>@T("Forum.Forums")</span></a></li>
+    }
+    @if (Model.DisplayContactUsMenuItem)
+    {
+        <li><a href="@Url.RouteUrl("ContactUs")"><span>@T("ContactUs")</span></a></li>
+    }
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMenuAfter })
+</ul>
+
+<script asp-location="Footer">
+
+    (function ($, ssCore) {
+        $(document).ready(function () {
+            ssCore.prepareTopMenu();
+        });
+        $(document).on('themeBreakpointPassed7Spikes', function (e) {
+            if (!e.isInitialLoad && !window.sevenSpikesTheme) {
+                ssCore.prepareTopMenu();
+            }
+        });
+    })(jQuery, sevenSpikesCore);
+
+</script>

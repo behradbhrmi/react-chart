@@ -1,0 +1,24 @@
+﻿@model RegisterResultModel
+@{
+    Layout = "_ColumnsOne";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.Register").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-registration-result-page");
+
+}
+
+    <div class="page registration-result-page from-panel">
+        <div class="page-title panel-heading">
+            <h1>@T("Account.Register")</h1>
+        </div>
+        <div class="page-body panel-body">
+            <div class="description alert alert-success">
+                @Model.Result
+            </div>
+            <div class="buttons">
+                <a href="@Model.ReturnUrl" class="btn btn-primary register-continue-button">@T("Account.Register.Result.Continue")</a>
+            </div>
+        </div>
+    </div>

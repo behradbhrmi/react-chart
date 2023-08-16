@@ -1,0 +1,17 @@
+﻿@model SubscriptionActivationModel
+@{
+    Layout = "_ColumnsTwo";
+
+    //page class
+    Html.AppendPageCssClassParts("html-newsletter-page");
+}
+<div class="page newsletter-page from-panel">
+    <div class="page-title panel-heading">
+        <h1>@T("Newsletter.Title")</h1>
+    </div>
+    <div class="page-body panel-body">
+        <strong>
+            @Model.Result
+        </strong>
+    </div>
+</div>

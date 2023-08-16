@@ -1,0 +1,148 @@
+Release Date: March 30, 2021
+nopAccelerate Themes version: 2.5.0
+
+Added Feature
+
+Support for nopCommerce 4.4 added
+
+==========================================
+Release Date: August 05, 2020
+nopAccelerate Themes version: 2.4.0
+
+Added Feature
+
+Added support for RTL
+
+Bug Fixes
+
+Estimation shipping popup design fixing
+
+==========================================
+
+Release Date: June 24, 2020
+nopAccelerate Themes version: 2.3.0
+
+Added Feature
+
+Support for nopCommerce 4.3 added
+
+Bug Fixes
+
+Fixed issue. Product Box Image display centrally when upload any size of images.
+
+==========================================
+
+Release Date: July 13, 2019
+nopAccelerate Themes version: 2.2.0
+
+Added Feature
+
+Support for nopCommerce 4.2 added
+
+==========================================
+
+Release Date: August 16, 2018
+nopAccelerate Themes version: 2.1.0
+
+Added Feature
+
+Support for nopCommerce 4.1 added
+
+==========================================
+
+Release Date: November 17, 2017
+nopAccelerate Themes version: 2.0.0
+
+Added Feature
+
+Support for nopCommerce 4.0 added
+
+==========================================
+
+Release Date: October 06, 2017
+nopAccelerate Themes version: 1.2.1
+
+Bug Fixes
+
+Fixed issue. The Navigation menu at the top is sticking up. When Navigate On The Page Automatically Leads You To The Top Of The Page for mobile screen.
+Fixed issue. Product Box Image display centrally when upload any size of images.
+
+==========================================
+
+Release Date: March 17, 2017
+nopAccelerate Themes version: 1.2.0
+
+Added Feature
+
+Support for nopCommerce 3.90 added
+Updated FontAwesome to version 4.7.0
+
+==========================================
+
+Release Date: September 13, 2016
+nopAccelerate Themes version: 1.1.0
+
+Added Feature
+
+Support for nopCommerce 3.80 added
+Updated FontAwesome to version 4.6.3
+Updated Bootstrap to version 3.3.7
+
+==========================================
+
+Release Date: December 12, 2015
+nopAccelerate Themes version: 1.0.5
+
+Added Feature
+
+Support for nopCommerce 3.70 added
+Updated FontAwesome to version 4.5.0
+Updated Bootstrap to version 3.3.6
+
+==========================================
+
+Release Date: December 3, 2015
+nopAccelerate Themes version: 1.0.4
+
+Added Feature
+
+Support for nopCommerce 3.60 added
+Updated FontAwesome to version 4.4.0
+Updated Bootstrap to version 3.3.5
+
+==========================================
+
+Release Date: June 01, 2015
+nopAccelerate Themes version: 1.0.3
+
+
+Added Feature
+
+Implement sticky menu.
+
+==========================================
+
+Release Date: May 29, 2015
+nopAccelerate Themes version: 1.0.2
+
+
+Bug Fixes
+
+Fixed issue. Added Static link into footer section and product detail page.
+
+==========================================
+
+Release Date: April 25, 2015
+nopAccelerate Themes version: 1.0.1
+
+
+Bug Fixes
+
+Fixed issue. Top-menu for responsive device not working properly.
+
+==========================================
+
+Release Date: April 23, 2015
+nopAccelerate Themes version: 1.0.0
+
+Initial Release.

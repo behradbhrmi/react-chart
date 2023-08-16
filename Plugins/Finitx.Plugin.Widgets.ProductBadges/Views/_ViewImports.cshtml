@@ -1,0 +1,30 @@
+﻿@inherits Nop.Web.Framework.Mvc.Razor.NopRazorPage<TModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Nop.Web.Framework
+
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
+@using Nop.Web.Framework.UI
+@using Nop.Web.Framework.Extensions
+@using System.Text.Encodings.Web
+@using Nop.Services.Events
+@using Nop.Web.Framework.Events
+@using Nop.Web.Framework.Infrastructure
+@using Finitx.Plugin.Widgets.ProductBadges.Models
+@using Finitx.Plugin.Widgets.ProductBadges
+@using Nop.Web.Models.Catalog
+@using Nop.Web.Extensions
+@using Nop.Web.Factories
+
+@inject IProductModelFactory productModelFactory
+@inject Nop.Core.IWorkContext workContext
+@{
+    Html.AddCssFileParts("~/Plugins/Finitx.Plugin.Widgets.ProductBadges/Content/styles.rtl.css", excludeFromBundle: true);
+    //Loading CSS file
+    Html.AddCssFileParts(ResourceLocation.Head, "~/Plugins/Finitx.Plugin.Widgets.ProductBadges/Views/Home/css/home.css", excludeFromBundle: false);
+    Html.AddCssFileParts(ResourceLocation.Head, "~/Plugins/Finitx.Plugin.Widgets.ProductBadges/Views/Home/css/bootstrap/bootstrap.css", excludeFromBundle: false);
+
+    //Loading js file
+    //Third parameter value indicating whether to exclude this script from bundling
+    //@NopHtml.AddScriptParts(ResourceLocation.Footer, "~/Plugins/{PluginName}/Scripts/{JSFileName.js}", excludeFromBundle: true);
+}
+

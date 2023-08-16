@@ -1,0 +1,38 @@
+﻿@model ShoppingCartModel.DiscountBoxModel
+@if (Model.Display)
+{
+    <div class="coupon-box">
+        <div class="title">
+           <strong>@T("ShoppingCart.DiscountCouponCode")</strong>
+        </div>
+        <div class="hint">@T("ShoppingCart.DiscountCouponCode.Tooltip")</div>
+            <input name="discountcouponcode" id="discountcouponcode" type="text" class="discount-coupon-code form-control" aria-label="@T("ShoppingCart.DiscountCouponCode.Label")" />
+        <div class="discount-button">
+            <button type="submit" id="applydiscountcouponcode" name="applydiscountcouponcode" class="btn btn-default apply-discount-coupon-code-button">@T("ShoppingCart.DiscountCouponCode.Button")</button>
+        </div>
+       @foreach (var message in Model.Messages)
+       {
+            <p class="@(Model.IsApplied ? "message bg-success" : "message bg-danger")">
+                @message
+            </p>
+        }
+        @foreach (var discount in Model.AppliedDiscountsWithCodes)
+        {
+            <div class="current-code">
+                <p class="bg-success">@string.Format(T("ShoppingCart.DiscountCouponCode.CurrentCode").Text, discount.CouponCode)</p>
+                @*empty value (little hack for FormValueExistsAttribute)*@
+                <button type="submit" name="removediscount-@discount.Id" title="@T("Common.Remove")" class="remove-discount-button"></button>
+            </div>
+        }
+    </div>
+    <script asp-location="Footer">
+        $(document).ready(function () {
+            $('#discountcouponcode').on('keydown', function (event) {
+                if (event.keyCode == 13) {
+                    $('#applydiscountcouponcode').trigger("click");
+                    return false;
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,100 @@
+﻿@model FinitxProductDataModel
+<div class="content">
+    <div class="form-horizontal">
+        <nop-cards id="finitx-cards">
+            <nop-card asp-name="configuration" asp-icon="fas fa-info" asp-title="@T("Finitx.Plugin.Widgets.ProductBadges.ProductData.PartLabele")" asp-hide-block-attribute-name="@ProductBadgesDefaults.HideGeneralBlock" asp-hide="@Model.HideGeneralBlock" asp-advanced="false">
+                <div class="container-fluid">
+                    <div class="cards-group">
+                        <div class="card card-default">
+                            <div class="card-body" id="FinitxProductDataView.HideGeneralBlock">                              
+                                <p>
+                                    @T("Finitx.Plugin.Widgets.ProductBadges.ProductData.Description")
+                                </p>
+                               
+                                        <script>
+                                            $(document).ready(function() {
+                                                $('#addProductFeature').click(function() {
+                                                    var id = $("#@Html.IdFor(model => model.Id)").val();
+                                                    var featuers = $("#@Html.IdFor(model => model.Features)").val();
+                                                    var isComingSoon = $("#@Html.IdFor(model => model.IsComingSoon)").val();
+
+                                                   
+                                                        //$("#addProductPictureAlert").click();
+                                                        //$('#addProductPicture').attr('disabled', true);
+
+                                                   
+
+                                                    var postData = {
+                                                       Id: id,
+                                                       Features:featuers,
+                                                       IsComingSoon:isComingSoon
+                                                    };
+                                                    addAntiForgeryToken(postData);
+
+                                                    $.ajax({
+                                                        cache: false,
+                                                        type: "POST",
+                                                        url: "@(Url.Action("SaveProductFeature", "FinitxProduct"))",
+                                                        data: postData,
+                                                        success: function (data, textStatus, jqXHR) {
+                                                            if (data.isSuccess) {
+                                                                $("#saveFeaturesAlert").click();
+                                                                return;
+                                                            }else{
+                                                                 $("#savingFeaturesFailedAlert").click();
+                                                            }
+                                                            
+                                                        },
+                                                        error: function (jqXHR, textStatus, errorThrown) {
+                                                            $("#savingFeaturesFailedAlert").click();
+                                                        },
+                                                        complete: function (jqXHR, textStatus) {
+                                                            $('#saveFeaturesAlert').attr('disabled', false);
+                                                            $('#savingFeaturesFailedAlert').attr('disabled', false);
+                                                        }
+                                                    });
+                                                });
+                                            });
+                                        </script>
+                                        <input type="hidden" value="@Model.Id" />
+                                        <div class="form-group row">
+                                            <div class="col-md-3">
+                                                <nop-label asp-for="Features" />
+                                            </div>
+                                            <div class="col-md-9">
+                                                <nop-textarea asp-for="Features" />
+                                                <span asp-validation-for="Features"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-3">
+                                                <nop-label asp-for="IsComingSoon" />
+                                            </div>
+                                            <div class="col-md-9">
+                                                <nop-editor asp-for="IsComingSoon" />
+                                                <span asp-validation-for="IsComingSoon"></span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group row">
+                                            <div class="col-md-9 offset-md-3">
+                                                <button type="button" id="addProductFeature" class="btn btn-primary">@T("Finitx.Plugin.Widgets.ProductBadges.ProductData.SaveFeature")</button>
+                                            </div>
+                                        </div>
+                                 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nop-card>
+
+        </nop-cards>
+    </div>
+
+
+
+
+</div>
+<nop-alert asp-alert-id="saveFeaturesAlert" asp-alert-message="@T("Finitx.Plugin.Widgets.ProductBadges.ProductData.SaveSuccess")" />
+<nop-alert asp-alert-id="savingFeaturesFailedAlert" asp-alert-message="@T("Finitx.Plugin.Widgets.ProductBadges.ProductData.SavingFailed")" />

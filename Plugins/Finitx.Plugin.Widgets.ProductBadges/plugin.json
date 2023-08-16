@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Product Badges",
+  "SystemName": "ProductBadges",
+  "Version": "2.14",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "Ali Asti",
+  "DisplayOrder": 1,
+  "FileName": "Finitx.Plugin.Widgets.ProductBadges.dll",
+  "Description": "This allows to you add differns badges to products"
+}

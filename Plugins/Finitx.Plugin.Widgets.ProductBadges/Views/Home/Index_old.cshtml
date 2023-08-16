@@ -1,0 +1,118 @@
+﻿@using Nop.Core.Domain.Seo
+@inject SeoSettings seoSettings
+@inject Nop.Core.Domain.Catalog.CatalogSettings _catalogSettings;
+@inject Nop.Services.Security.IAclService _aclService;
+@inject Nop.Services.Catalog.ICompareProductsService _compareProductsService;
+@inject Nop.Services.Catalog.IProductService _productService;
+@inject Nop.Web.Factories.IProductModelFactory _productModelFactory;
+@inject Nop.Services.Stores.IStoreMappingService _storeMappingService;
+
+@{
+    Layout = "_ColumnsOne";
+
+    //title
+    if (!string.IsNullOrEmpty(seoSettings.HomepageTitle))
+    {
+        Html.AddTitleParts(seoSettings.HomepageTitle);
+    }
+
+    //meta
+    if (!string.IsNullOrEmpty(seoSettings.HomepageDescription))
+    {
+        Html.AddMetaDescriptionParts(seoSettings.HomepageDescription);
+    }
+
+    //page class
+    Html.AppendPageCssClassParts("html-home-page");
+    var lang = await workContext.GetWorkingLanguageAsync();
+}
+<style>
+    .compare-title {
+        font-size: 3rem;
+        position: relative;
+        margin: auto;
+        margin-bottom: 3rem;
+        width: 90%;
+    }
+
+        .compare-title span {
+            background-color: white;
+            padding-right: 10px;
+        }
+
+
+        .compare-title:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #ddd;
+            position: absolute;
+            bottom: 4px;
+            z-index: -1;
+        }
+</style>
+<div class="page home-page">
+  <input type="hidden" value="@lang.Name" />
+    <div class="page-body">
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageTop })
+        @* @await Component.InvokeAsync("TopicBlock", new { systemName = "HomepageText" })*@
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeCategories })
+        @*@await Component.InvokeAsync("HomepageCategories")*@
+        @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_after_categories" })
+        @{
+            var homePageCenterBannerHtml = await Component.InvokeAsync("Widget", new { widgetZone = "home_page_before_tabs" });
+        }
+
+        @if (!String.IsNullOrEmpty(await homePageCenterBannerHtml.RenderHtmlContentAsync()))
+        {
+            <div class="home-page-center-banner">
+                @homePageCenterBannerHtml
+            </div>
+        }
+        @{
+            var model = new CompareProductsModel
+            {
+                IncludeShortDescriptionInCompareProducts = _catalogSettings.IncludeShortDescriptionInCompareProducts,
+                IncludeFullDescriptionInCompareProducts = _catalogSettings.IncludeFullDescriptionInCompareProducts,
+            };
+
+            var products = await _productService.GetAllProductsDisplayedOnHomepageAsync();
+
+            //prepare model
+            (await _productModelFactory.PrepareProductOverviewModelsAsync(products, prepareSpecificationAttributes: true))
+                .ToList()
+                .ForEach(model.Products.Add);
+        }
+
+        @* @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_native_categories" })*@
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeNews })
+        @*@await Component.InvokeAsync("HomepageNews")*@
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforePoll })
+        @*@await Component.InvokeAsync("HomepagePolls")*@
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBeforeProducts })
+        <div class="home-page-bottom">
+            @await Component.InvokeAsync("HomepageProducts")
+
+            @*@await Component.InvokeAsync("HomepageBestSellers")*@
+            @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_native_new_products" })
+            <div class="home-page-banners">
+                @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_banner_1" })
+                @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_banner_2" })
+                @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_banner_3" })
+            </div>
+        </div>
+        @if (model.Products.Count > 1)
+        {
+            <h1 class="title compare-title">
+                <span>
+                    Compare plans
+                </span>
+            </h1>
+            @(await Html.PartialAsync("_CompareProducts", model))
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomepageBottom })
+        }
+
+
+    </div>
+</div>

@@ -1,0 +1,102 @@
+﻿
+@model CarawayConfigurationModel
+
+<div class="card-body">
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="ApiKey" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="ApiKey" asp-required="true" asp-value="@Model.ApiKey" />
+            <span asp-validation-for="ApiKey"></span>
+        </div>
+    </div>
+     <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="TetherRate" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="TetherRate" asp-required="true" asp-value="@Model.TetherRate" />
+            <span asp-validation-for="TetherRate"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="PriceStartToApplyInstantPayout" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="PriceStartToApplyInstantPayout" asp-required="true" asp-value="@Model.PriceStartToApplyInstantPayout" />
+            <span asp-validation-for="PriceStartToApplyInstantPayout"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="PriceStartToApplyFastPayment" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="PriceStartToApplyFastPayment" asp-required="true" asp-value="@Model.PriceStartToApplyFastPayment" />
+            <span asp-validation-for="PriceStartToApplyFastPayment"></span>
+        </div>
+    </div>
+   
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="PayoutAddress" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="PayoutAddress" asp-required="true" asp-value="@Model.PayoutAddress" />
+            <span asp-validation-for="PayoutAddress"></span>
+        </div>
+    </div>
+    
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="PaymentOpenUrl" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="PaymentOpenUrl" asp-required="true" asp-value="@Model.PaymentOpenUrl" />
+            <span asp-validation-for="PaymentOpenUrl"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="PaymentVerifyUrl" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="PaymentVerifyUrl" asp-required="true" asp-value="@Model.PaymentVerifyUrl" />
+            <span asp-validation-for="PaymentVerifyUrl"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="InstantPayout" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="InstantPayout" asp-required="true" />
+            <span asp-validation-for="InstantPayout"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-3">
+            <nop-label asp-for="DeadlineToPay" />
+        </div>
+        <div class="col-md-9">
+            <nop-editor asp-for="DeadlineToPay" asp-required="true" asp-value="@Model.DeadlineToPay" />
+            <span asp-validation-for="DeadlineToPay"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-9 offset-md-3">
+            <div class="input-group input-group-short">
+                <div class="input-group-text">
+                    <button type="submit" name="save" class="btn btn-primary">
+                        @T("Admin.Common.Save")
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>

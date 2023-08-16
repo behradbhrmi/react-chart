@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Misc",
+  "FriendlyName": "Log Data To Server",
+  "SystemName": "LogDataToServer",
+  "Version": "1.8.9",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "Ali Asti",
+  "DisplayOrder": 1,
+  "FileName": "Finitx.Plugin.Misc.LogEventsDataToServer.dll",
+  "Description": "This plugin sends some user activities to the API"
+}

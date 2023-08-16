@@ -1,0 +1,12 @@
+﻿<div class="header">
+    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
+    <div class="header-options-wrapper">
+        <div class="header-selectors-wrapper">
+            @await Component.InvokeAsync("TaxTypeSelector")
+            @await Component.InvokeAsync("CurrencySelector")
+            @await Component.InvokeAsync("LanguageSelector")
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderSelectors })
+        </div>
+        @await Component.InvokeAsync("HeaderLinks")
+    </div>
+</div>

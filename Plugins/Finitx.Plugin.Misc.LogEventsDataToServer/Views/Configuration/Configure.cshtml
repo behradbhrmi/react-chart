@@ -1,0 +1,16 @@
+﻿@model FinitxLogDataSetting
+
+@{
+    Layout = "_ConfigurePlugin";
+}
+<form asp-controller="FinitxLogDataSetting" asp-action="Configure" method="post">
+    <div class="content">
+        <div class="form-horizontal">
+            <nop-cards id="zoho-cards">
+                <nop-card asp-name="@T("Finitx.Plugin.Misc.LogEventsDataToServer.Setting.Configuration")" asp-icon="fas fa-info" asp-title="Configuration" asp-hide-block-attribute-name="HideGeneralBlock" asp-hide="false" asp-advanced="false">
+                    @(await Html.PartialAsync("~/Plugins/Finitx.Plugin.Misc.LogEventsDataToServer/Views/Configuration/_Configuration.cshtml", Model))
+                </nop-card>                
+            </nop-cards>
+        </div>
+    </div>
+</form>

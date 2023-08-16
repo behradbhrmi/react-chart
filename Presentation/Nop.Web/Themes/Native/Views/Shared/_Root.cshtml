@@ -1,0 +1,125 @@
+﻿@using Nop.Core
+@using Nop.Services.Configuration
+@using Nop.Web.Framework.Themes
+@using Nop.Services.Security;
+@inject IStoreContext storeContext
+@inject IThemeContext themeContext
+@inject ISettingService settingService
+@inject IPermissionService permissionService
+
+@{
+    Layout = "_Root.Head";
+
+    var currentStore = await storeContext.GetCurrentStoreAsync();
+    var numberOfItemBoxesClass = (await settingService.GetSettingByKeyAsync("nativethemesettings.CategoryPageItemBoxesPerRow", "items-per-row-three", currentStore.Id, true)).ToLowerInvariant();
+    var homeClass = "";
+    var controllerName = Url.ActionContext.RouteData.Values["controller"].ToString();
+    var isHomePage = controllerName.Equals("home", StringComparison.InvariantCultureIgnoreCase);
+    if (isHomePage)
+    {
+        homeClass = "home-page";
+    }
+
+    var wishlistEnabled = await permissionService.AuthorizeAsync(StandardPermissionProvider.EnableWishlist);
+    var shoppingCartEnabled = await permissionService.AuthorizeAsync(StandardPermissionProvider.EnableShoppingCart);
+}
+
+@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyStartHtmlTagAfter })
+@await Html.PartialAsync("_Notifications")
+<div class="master-wrapper-page @homeClass @numberOfItemBoxesClass">
+    @await Component.InvokeAsync("AdminHeaderLinks")
+    @await Html.PartialAsync("_JavaScriptDisabledWarning")
+    @await Html.PartialAsync("_OldInternetExplorerWarning")
+    <div class="overlayOffCanvas"></div>
+    @if (isHomePage)
+    {
+        @await Component.InvokeAsync("Widget", new { widgetZone = "home_page_main_slider" })
+    }
+    @await Html.PartialAsync("_Header")
+    <div class="sub-header">
+        <div class="sub-header-center">
+            <div class="header-logo">
+                @await Component.InvokeAsync("Logo")
+            </div>
+            <div class="header-menu">
+                <div class="close-menu">
+                    <span>@T("SevenSpikes.Themes.Common.CloseMenu")</span>
+                </div>
+                @{
+                    var menuHtml = await Component.InvokeAsync("Widget", new { widgetZone = "theme_header_menu" });
+                }
+                @if (!String.IsNullOrEmpty(await menuHtml.RenderHtmlContentAsync()))
+                {
+                    @menuHtml
+                }
+                else
+                {
+                    @await Component.InvokeAsync("TopMenu")
+                }
+            </div>
+        </div>
+    </div>
+    <div class="responsive-nav-wrapper-parent">
+        <div class="responsive-nav-wrapper">
+            <div class="menu-title">
+                <span>@T("SevenSpikes.Themes.Common.MenuTitle")</span>
+            </div>
+            <div class="search-wrap">
+                <span>@T("Search")</span>
+            </div>
+            @if (wishlistEnabled)
+            {
+                <div class="wishlist-button">
+                    <a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">
+                        <span class="cart-label">@T("Wishlist")</span>
+                    </a>
+                </div>
+            }
+            @if (shoppingCartEnabled)
+            {
+                <div class="shopping-cart-link">
+                    <a href="@Url.RouteUrl("ShoppingCart")">@T("ShoppingCart")</a>
+                </div>
+            }
+            <div class="filters-button">
+                <span>@T("SevenSpikes.Themes.Common.Filters")</span>
+            </div>
+            <div class="personal-button" id="header-links-opener">
+                <span>@T("SevenSpikes.Themes.Common.Personal")</span>
+            </div>
+        </div>
+    </div>
+    <div class="master-wrapper-content">
+        <script asp-location="Footer">
+			var localized_data = {
+	            AjaxCartFailure: "@T("AjaxCart.Failure")"
+	        };
+            AjaxCart.init(false, '.header-links .cart-qty', '.header-links .wishlist-qty', '#flyout-cart', localized_data);
+        </script>
+        @*ajax loading window*@
+        <div class="ajax-loading-block-window" style="display: none">
+            <div class="loading-image">
+            </div>
+        </div>
+        @if (IsSectionDefined("BreadcrumbTopRoot"))
+        {
+            @RenderSection("BreadcrumbTopRoot");
+        }
+        <div class="master-column-wrapper">
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentBefore })
+            @RenderBody()
+        </div>
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContentAfter })
+    </div>
+</div>
+<div class="footer">
+    @if (isHomePage)
+    {
+        @await Html.PartialAsync("_FooterUpper")
+    }
+
+    @await Component.InvokeAsync("Footer")
+
+</div>
+@await Component.InvokeAsync("EuCookieLaw")
+@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.BodyEndHtmlTagBefore })

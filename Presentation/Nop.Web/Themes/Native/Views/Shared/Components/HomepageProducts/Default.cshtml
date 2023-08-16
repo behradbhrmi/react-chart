@@ -1,0 +1,46 @@
+﻿@model IList<ProductOverviewModel>
+    <style>
+        select {
+            width: 100%;
+        }
+
+        .item-box {
+            border: 1px solid #B5B4B4;
+            margin: 0px 0px 0px 0px;
+            padding: 10px;
+            min-height:550px;
+        }
+
+        .item-box:nth-child(3n+1) {
+            border-radius: 5px 0px 0px 5px;
+        }
+
+        .item-box:nth-child(3n+2) {
+            border-left: 0px;
+          
+        }
+
+        .item-box:nth-child(3n) {
+            border-radius: 0px 5px 5px 0px;
+            border-left: 0px;
+        }
+        .product-title a {
+            text-align:center;
+        }
+    </style>
+    @if (Model.Count > 0)
+    {
+        <div class="product-grid home-page-product-grid" style=" width: 100% !important;">
+            @*<div class="title">
+                    <strong>@T("Homepage.Products")</strong>
+                </div>*@
+            <div class="item-grid" style="display:flex;align-items:unset;">
+                @foreach (var item in Model)
+                {
+                    <div class="item-box">
+                        @await Html.PartialAsync("_ProductBox", item)
+                    </div>
+                }
+            </div>
+        </div>
+    }

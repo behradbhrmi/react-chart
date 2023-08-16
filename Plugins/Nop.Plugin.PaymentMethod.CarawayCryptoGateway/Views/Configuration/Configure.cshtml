@@ -1,0 +1,18 @@
+﻿@model CarawayConfigurationModel
+
+@{
+    Layout = "_ConfigurePlugin";
+    var ZohoWarehousesHideGeneralBlock = "ZohoWarehousesHideGeneralBlock";
+    var HideGeneralBlock = false;
+}
+<form asp-controller="CarawayGateway" asp-action="Configure" method="post">
+    <div class="content">
+        <div class="form-horizontal">
+            <nop-cards id="zoho-cards">
+                <nop-card asp-name="configuration" asp-icon="fas fa-info" asp-title="Configuration" asp-hide-block-attribute-name="ZohoWarehousesHideGeneralBlock" asp-hide="HideGeneralBlock" asp-advanced="false">
+                    @(await Html.PartialAsync("~/Plugins/PaymentMethod.CarawayCryptoGateway/Views/Configuration/_Configuration.cshtml", Model))
+                </nop-card>
+            </nop-cards>
+        </div>
+    </div>
+</form>

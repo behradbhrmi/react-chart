@@ -1,0 +1,6 @@
+﻿{
+  "DataConnectionString": "Data Source=.;Initial Catalog=FinitxStoreDB4.4;Integrated Security=True;Persist Security Info=False",
+  "DataProvider": "sqlserver",
+  "SQLCommandTimeout": null,
+  "RawDataSettings": {}
+}

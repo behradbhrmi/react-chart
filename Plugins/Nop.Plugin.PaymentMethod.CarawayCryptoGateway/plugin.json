@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Payment",
+  "FriendlyName": "Caraway Crypto Gateway",
+  "SystemName": "PaymentMethod.PaymentMethod.CarawayCryptoGateway",
+  "Version": "1.01",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "CaraWay",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.PaymentMethod.CarawayCryptoGateway.dll",
+  "Description": "Official plugin for Caraway payment gateway"
+}

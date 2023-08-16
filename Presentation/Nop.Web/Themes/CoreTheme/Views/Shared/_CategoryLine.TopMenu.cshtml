@@ -1,0 +1,32 @@
+﻿@model TopMenuModel.CategoryLineModel
+@{
+    //subcategories
+    var subCategories = Model.ResponsiveMobileMenu ?
+    //responsive (all categories)
+    Model.Category.SubCategories :
+    //standard design (only categories with "IncludeInTopMenu")
+    Model.Category.SubCategories.Where(x => x.IncludeInTopMenu).ToList();
+}
+@if (Model.Category.SubCategories.Count > 0)
+{
+    @await Html.PartialAsync("_SubCategoryLine.TopMenu", Model.Category)
+}
+else
+{
+    <li>
+        <a href="@Url.RouteUrl("Category", new { SeName = Model.Category.SeName })">
+            @Model.Category.Name
+            @if (Model.Category.NumberOfProducts.HasValue)
+            {
+                <span class="head-number op-number">
+                    @if (Model.Category.NumberOfProducts.Value < 0)
+                    {
+                        @:0@(Model.Category.NumberOfProducts.Value)
+                    }
+                    @T("Categories.TotalProducts", Model.Category.NumberOfProducts.Value)
+                </span>
+                <span>&nbsp;</span>
+            }
+        </a>
+    </li>
+}

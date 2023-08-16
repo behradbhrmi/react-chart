@@ -1,0 +1,36 @@
+﻿<nav class="top-menu">
+    <div class="headerlinks">
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
+        @await Component.InvokeAsync("HeaderLinks")
+    </div>
+</nav>
+<div class="header">
+    <div class="row">
+        <div class="col-sm-5 col-md-5">
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderBefore })
+            <div class="header-logo">
+                @await Component.InvokeAsync("Logo")
+            </div>
+        </div>
+        <div class="col-sm-7 col-md-7">
+            <div class="header-selectors-wrapper">
+                <div class="search-box store-search-box pull-right">
+                    @await Component.InvokeAsync("SearchBox")
+                </div>
+                <div class="header-selectors">
+                    <div class="taxtype-selector">
+                        @await Component.InvokeAsync("TaxTypeSelector")
+                    </div>
+                    <div class="currency-selector">
+                        @await Component.InvokeAsync("CurrencySelector")
+                    </div>
+                    <div class="language-selector">
+                        @await Component.InvokeAsync("LanguageSelector")
+                    </div>
+                    @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderSelectors })
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+

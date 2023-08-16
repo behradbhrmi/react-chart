@@ -1,0 +1,43 @@
+﻿@using Nop.Core
+
+@inject IWorkContext workContext
+@{
+    var supportRtl = (await workContext.GetWorkingLanguageAsync()).Rtl;
+
+    Html.AppendCssFileParts("~/Plugins/SevenSpikes.Core/Styles/perfect-scrollbar.min.css");
+
+    if (supportRtl)
+    {
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/1280.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/1024.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/768.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/480.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/mobile.rtl.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/tables.rtl.css");
+    }
+    else
+    {
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/1280.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/1024.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/768.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/480.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/mobile.css");
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/tables.css");
+    }
+
+    if (supportRtl)
+    {
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/styles.rtl.css");
+    }
+    else
+    {
+        Html.AppendCssFileParts("~/Themes/Native/Content/css/styles.css");
+    }
+
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/footable.min.js");
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/perfect-scrollbar.min.js");
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/sevenspikes.core.min.js");
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Plugins/SevenSpikes.Core/Scripts/sevenspikes.theme.ex.min.js");
+
+    Html.AddScriptParts(ResourceLocation.Footer, "~/Themes/Native/Content/scripts/Native.js");
+}

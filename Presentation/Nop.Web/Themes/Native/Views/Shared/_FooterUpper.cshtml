@@ -1,0 +1,40 @@
+﻿<div class="footer-upper">
+    <div class="footer-blocks-holder">
+        <div class="footer-upper-block about-us">
+            <h3 class="title">
+                <span>@T("SevenSpikes.Themes.Native.AboutUs.Title")</span>
+            </h3>
+            <p>@T("SevenSpikes.Themes.Native.AboutUs")</p>
+        </div>
+        <div class="footer-upper-block twitter">
+            <h3 class="title">
+                <span>@T("SevenSpikes.Themes.Native.LatestTweet")</span>
+            </h3>
+            <div class="twitter-plugin">
+                <!--include twitter plugin-->
+                @await Component.InvokeAsync("Widget", new { widgetZone = "native_twitter_profile_footer" })
+            </div>
+        </div>
+        <div class="footer-upper-block newsletter">
+            @{
+                var newsLetterHtml = await Component.InvokeAsync("NewsletterBox");
+            }
+
+            @if (!String.IsNullOrEmpty(await newsLetterHtml.RenderHtmlContentAsync()))
+            {
+                <h3 class="title">
+                    <span>@T("SevenSpikes.Themes.Native.Newsletter")</span>
+                </h3>
+                <p>@T("SevenSpikes.Themes.Native.Newsletter.Description")</p>
+                @newsLetterHtml
+            }
+            else 
+            {
+                <h3 class="title">
+                    <span>@T("Footer.FollowUs")</span>
+                </h3> 
+            }
+            @await Component.InvokeAsync("SocialButtons")
+        </div>
+    </div>
+</div>

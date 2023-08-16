@@ -1,0 +1,91 @@
+﻿@model ContactUsModel
+@{
+    Layout = "_ColumnsOne";
+
+    //title
+    Html.AddTitleParts(T("PageTitle.ContactUs").Text);
+    //page class
+    Html.AppendPageCssClassParts("html-contact-page");
+}
+<div class="page contact-page from-panel">
+    <div class="page-title panel-heading">
+        <h1>@T("PageTitle.ContactUs")</h1>
+    </div>
+    <div class="contact-details">
+        <div class="page-body">
+            @await Component.InvokeAsync("TopicBlock", new { systemName = "ContactUs" })
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContactUsTop })
+            @if (Model.SuccessfullySent)
+            {
+                <div class="result alert alert-success">
+                    @Model.Result
+                </div>
+            }
+            else
+            {
+                <form asp-route="ContactUs" method="post">
+                    <div asp-validation-summary="ModelOnly" class="message-error"></div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4 col-md-4" asp-for="FullName" asp-postfix=":"></label>
+                            <div class="col-sm-5 col-md-5">
+                                <input asp-for="FullName" placeholder="@T("ContactUs.FullName.Hint")" class="fullname form-control" />
+                            </div>
+                            <div class="col-sm-3 col-md-3">
+                                <nop-required />
+                                <span asp-validation-for="FullName"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4 col-md-4" asp-for="Email" asp-postfix=":"></label>
+                            <div class="col-sm-5 col-md-5">
+                                <input asp-for="Email" placeholder="@T("ContactUs.Email.Hint")" class="email form-control" />
+                            </div>
+                            <div class="col-sm-3 col-md-3">
+                                <nop-required />
+                                <span asp-validation-for="Email"></span>
+                            </div>
+                        </div>
+                        @if (Model.SubjectEnabled)
+                        {
+                            <div class="form-group">
+                                <label class="control-label col-sm-4 col-md-4" asp-for="Subject" asp-postfix=":"></label>
+                                <div class="col-sm-5 col-md-5">
+                                    <input asp-for="Subject" placeholder="@T("ContactUs.Subject.Hint")" class="subject form-control" />
+                                </div>
+                                <div class="col-sm-3 col-md-3">
+                                    <nop-required />
+                                    <span asp-validation-for="Subject"></span>
+                                </div>
+                            </div>
+                        }
+                        <div class="form-group">
+                            <label class="control-label col-sm-4 col-md-4" asp-for="Enquiry" asp-postfix=":"></label>
+                            <div class="col-sm-5 col-md-5">
+                                <textarea asp-for="Enquiry" placeholder="@T("ContactUs.Enquiry.Hint")" class="enquiry form-control"></textarea>
+                            </div>
+                            <div class="col-sm-3 col-md-3">
+                                <nop-required />
+                                <span asp-validation-for="Enquiry"></span>
+                            </div>
+                        </div>
+                        @if (Model.DisplayCaptcha)
+                        {
+                            <div class="form-group">
+                                <div class="captcha-box col-sm-offset-4 col-md-offset-4 col-md-8">
+                                    <nop-captcha class="g-recaptcha" />
+                                </div>
+                            </div>
+                        }
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-md-offset-4 col-md-8">
+                                <button type="submit" name="send-email" class="btn btn-primary contact-us-button">@T("ContactUs.Button")</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            }                
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ContactUsBottom })
+        </div>
+    </div>
+</div>

@@ -1,0 +1,158 @@
+﻿{
+  "InstalledPluginNames": [
+    "Obsolete field, using only for compatibility"
+  ],
+  "InstalledPlugins": [
+    {
+      "SystemName": "DiscountRequirement.MustBeAssignedToCustomerRole",
+      "Version": "1.36"
+    },
+    {
+      "SystemName": "CurrencyExchange.ECB",
+      "Version": "1.28"
+    },
+    {
+      "SystemName": "Misc.Sendinblue",
+      "Version": "3.33"
+    },
+    {
+      "SystemName": "MultiFactorAuth.GoogleAuthenticator",
+      "Version": "1.04"
+    },
+    {
+      "SystemName": "Payments.CheckMoneyOrder",
+      "Version": "1.46"
+    },
+    {
+      "SystemName": "Payments.Manual",
+      "Version": "1.55"
+    },
+    {
+      "SystemName": "Payments.PayPalSmartPaymentButtons",
+      "Version": "1.19"
+    },
+    {
+      "SystemName": "Payments.PayPalStandard",
+      "Version": "1.66"
+    },
+    {
+      "SystemName": "Pickup.PickupInStore",
+      "Version": "1.39"
+    },
+    {
+      "SystemName": "Shipping.FixedByWeightByTotal",
+      "Version": "2.28"
+    },
+    {
+      "SystemName": "Shipping.ShipStation",
+      "Version": "1.14"
+    },
+    {
+      "SystemName": "Shipping.UPS",
+      "Version": "1.65"
+    },
+    {
+      "SystemName": "Tax.Avalara",
+      "Version": "2.41"
+    },
+    {
+      "SystemName": "Tax.FixedOrByCountryStateZip",
+      "Version": "1.38"
+    },
+    {
+      "SystemName": "Widgets.AccessiBe",
+      "Version": "1.12"
+    },
+    {
+      "SystemName": "Widgets.FacebookPixel",
+      "Version": "1.06"
+    },
+    {
+      "SystemName": "Widgets.GoogleAnalytics",
+      "Version": "1.67"
+    },
+    {
+      "SystemName": "Widgets.NivoSlider",
+      "Version": "1.41"
+    },
+    {
+      "SystemName": "ExternalAuth.Facebook",
+      "Version": "1.68"
+    },
+    {
+      "SystemName": "ProductBadges",
+      "Version": "2.14"
+    },
+    {
+      "SystemName": "LogDataToServer",
+      "Version": "1.8.9"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.AjaxCart",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.AjaxFilters",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.AnywhereSliders",
+      "Version": "4.41"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.CloudZoom",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.FacebookShop",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.InstantSearch",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.JCarousel",
+      "Version": "4.40"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.MegaMenu",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.NopQuickTabs",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.QuickView",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.SaleOfTheDay",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Theme.Native",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "NopTop.Payments.Zarinpal",
+      "Version": "4.40.4.2"
+    },
+    {
+      "SystemName": "SevenSpikes.Core",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "SevenSpikes.Nop.Plugins.ProductRibbons",
+      "Version": "4.4"
+    },
+    {
+      "SystemName": "PaymentMethod.PaymentMethod.CarawayCryptoGateway",
+      "Version": "1.01"
+    }
+  ],
+  "PluginNamesToUninstall": [],
+  "PluginNamesToDelete": [],
+  "PluginNamesToInstall": []
+}

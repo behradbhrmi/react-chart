@@ -1,0 +1,70 @@
+﻿@model FinitxProductDataModel
+@{
+    Html.AddCssFileParts("~/Plugins/Finitx.Plugin.Widgets.ProductBadges/Content/styles.css", excludeFromBundle: true);
+}
+@{ var lang = await workContext.GetWorkingLanguageAsync(); }
+@if (lang.Rtl)
+{
+    <style>
+        .comingSoonbadge {
+            width: 45%;
+            border: 2px solid darkgray;
+            background-color: darkgray;
+            margin-right: -10px;
+            border-radius: 5px 0px 0px 5px;
+            border-left: 0px;
+            padding: 3px;
+            text-align: center;
+            height: 35px;
+            margin-top: 3px;
+        }
+
+        .emptyComingSoonbadge {
+            width: 45%;
+            height: 35px;
+        }
+    </style>
+}
+else
+{
+    <style>
+        .comingSoonbadge {
+            width: 45%;
+            border: 2px solid darkgray;
+            background-color: darkgray;
+            margin-left: -10px;
+            border-radius: 0px 5px 5px 0px;
+            border-left: 0px;
+            padding: 3px;
+            text-align: center;
+            height: 35px;
+            margin-top: 3px;
+        }
+
+        .emptyComingSoonbadge {
+            width: 45%;
+            height: 35px;
+        }
+    </style>
+}
+
+@if (Model?.IsComingSoon ?? false)
+{
+    <div class="comingSoonbadge">
+        @if (lang.Rtl)
+        {
+            <p>به زودی</p>
+        }
+        else
+        {
+            <p>Coming Soon</p>
+        }
+
+    </div>
+}
+@if (!(Model?.IsComingSoon ?? false))
+{
+    <div class="emptyComingSoonbadge">
+
+    </div>
+}

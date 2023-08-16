@@ -1,0 +1,441 @@
+//Loading CSS file
+@NopHtml.AddCssFileParts(ResourceLocation.Head, "~/Plugins/Finitx.Plugin.Widgets.ProductBadges/Views/Home/css/home.css", excludeFromBundle = false);
+@NopHtml.AddCssFileParts(ResourceLocation.Head, "~/Plugins/Finitx.Plugin.Widgets.ProductBadges/Views/Home/css/bootstrap/bootstrap.css", excludeFromBundle = false);
+
+//Loading js file
+//Third parameter value indicating whether to exclude this script from bundling
+//@NopHtml.AddScriptParts(ResourceLocation.Footer, "~/Plugins/{PluginName}/Scripts/{JSFileName.js}", excludeFromBundle: true);
+<html lang="fa">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kara Bot</title>
+    <meta name="description" content="Kara Bot">
+    <meta name="author" content="SitePoint">
+
+    <meta property="og:title" content="Kara Bot">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.karabot.com">
+    <meta property="og:description" content="Kara Bot">
+    <meta property="og:image" content="image.png">
+
+    <link rel="icon" href="assets/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="logo" class="logo-image" />
+                    </div>
+                </div>
+                <div class="col-md-6 intro-container">
+                    <div class="col-md-12 intro change-direction">
+                        <div class="intro-title resource" name="whyKaraBot">
+                        </div>
+                        <div class="intro-description resource" name="whyKaraBotDescription">
+                        </div>
+                    </div>
+                    <div class="lang-container">
+                        <button class="btn fa-btn" id="fa-btn" title="فارسی"></button>
+                        <button class="btn en-btn" id="en-btn" title="English"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="mission">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-md-6 col-sm-12 mission-container">
+                    <div class="mission-text change-direction">
+                        <span class="mission-title resource" name="mission"></span>
+                        <span class="mission-line"></span>
+                        <div class="mission-description">
+                            <span class="resource" name="missionDescription"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 mt-2">
+                    <div class="mission-image">
+                        <img src="assets/our-mission.png" alt="our-mission" class="mission-pic img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reason">
+        <div class="container d-flex">
+            <div class="row change-direction">
+                <div class="col-md-6 col-sm-12">
+                    <div class="reason-title">
+                        <div>
+                            <span class="reason-text resource" name="reason"></span>
+                            <span class="reason-line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 d-flex align-items-stretch">
+                    <div class="reason-info change-direction">
+                        <div class="col-md-3 col-sm-12">
+                            <img src="assets/reason1.png" alt="" class="reason-image" />
+                            <div class="reason-description">
+                                <span class="resource" name="reasonOne"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <img src="assets/reason2.png" alt="" class="reason-image" />
+                            <div class="reason-description">
+                                <span class="resource" name="reasonTwo"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <img src="assets/reason3.png" alt="" class="reason-image" />
+                            <div class="reason-description">
+                                <span class="resource" name="reasonThree"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <img src="assets/reason4.png" alt="" class="reason-image" />
+                            <div class="reason-description">
+                                <span class="resource" name="reasonFour"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feature">
+        <div class="container d-flex">
+            <div class="row">
+                <div class="col-md-4 d-flex align-items-center change-direction">
+                    <div class="feature-part">
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureOne"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureTwo"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureThree"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureFour"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureFive"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center">
+                    <div class="feature-title">
+                        <span class="feature-text resource" name="feature"></span>
+                        <span class="feature-line"></span>
+                        <img src="assets/feature.png" alt="" class="img-fluid feature-image" />
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-center change-direction">
+                    <div class="feature-part">
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureSix"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureSeven"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureEight"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureNine"></span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="feature-shape"></span>
+                            <div class="feature-description">
+                                <span class="resource" name="featureTen"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container h-100 position-relative">
+            <div class="row">
+                <div class="col-md-6 change-direction" style="margin: 0 auto">
+                    <div class="row">
+                        <div class="col-md-12 d-flex">
+                            <div class="mb-4 pt-5" style="margin: 0 auto">
+                                <span class="footer-text resource" name="contactUs">ارتباط با ما</span>
+                                <span class="footer-line"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" id="name" name="name" class="form-control footer-item resource"
+                                   placeholder="نام و نام خانوادگی">
+                        </div>
+                        <div class="col-md-6 email-container">
+                            <input type="email" id="email" name="email" class="form-control footer-item resource"
+                                   placeholder="ایمیل">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <textarea type="text" id="message" name="message" rows="5" placeholder="پیام"
+                                      class="form-control md-textarea footer-item resource"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <button type="submit" class="btn footer-button resource" name="send"
+                                    onclick="send()">
+                                ارسال
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row position-absolute bottom-0 w-100 copyright">
+                <div class="col-md-12 text-center text-white change-direction">
+                    <span class="resource" name="copyrightPartTwo">2021&copy; کلیه حقوق متعلق به شرکت</span>
+                    <a href="#" target="_blank" rel="noreferrer" class="link resource" name="companyName">آلفا امگا</a>
+                    <span class="resource" name="copyrightPartOne"> می باشد. </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div id="messageToast" class="toast text-white hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto header-text"></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script>
+
+        var request;
+        var request2;
+        if (window.XMLHttpRequest) {
+            request = new XMLHttpRequest();
+            request2 = new XMLHttpRequest();
+        } else {
+            request = new ActiveXObject("Microsoft.XMLHTTP");
+            request2 = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+
+        let resourcesFa;
+        let resourcesEn;
+        let currentCulture = window.localStorage.getItem("current-culture") ?? "fa";
+        let faBtn = document.getElementById("fa-btn");
+        let enBtn = document.getElementById("en-btn");
+        if (currentCulture === "fa") {
+            enBtn.classList.remove("active-lang");
+            faBtn.classList.add("active-lang");
+        } else {
+            faBtn.classList.remove("active-lang");
+            enBtn.classList.add("active-lang");
+        }
+
+        request.open('GET', "resources/en.json");
+        request.onreadystatechange = function () {
+            if (request.readyState === 4 && request.status === 200) {
+                resourcesEn = JSON.parse(request.responseText);
+                if (currentCulture === "en")
+                    ApplyLanguage();
+            }
+        }
+        request.send();
+        request2.open('GET', "resources/fa.json");
+        request2.onreadystatechange = function () {
+            if (request2.readyState === 4 && request2.status === 200) {
+                resourcesFa = JSON.parse(request2.responseText);
+                if (currentCulture === "fa")
+                    ApplyLanguage();
+            }
+        }
+        request2.send();
+        ApplyLanguage();
+
+
+        faBtn.onclick = () => {
+            currentCulture = "fa";
+            enBtn.classList.remove("active-lang");
+            faBtn.classList.add("active-lang");
+            window.localStorage.setItem("current-culture", currentCulture);
+            ApplyLanguage();
+        }
+
+        enBtn.onclick = () => {
+            currentCulture = "en";
+            faBtn.classList.remove("active-lang");
+            enBtn.classList.add("active-lang");
+            window.localStorage.setItem("current-culture", currentCulture);
+            ApplyLanguage();
+        }
+
+        function ApplyLanguage() {
+            let currentResource = currentCulture === "fa" ? resourcesFa : resourcesEn;
+            let currentDirection = currentCulture === "fa" ? "rtl" : "ltr";
+            if (currentResource) {
+                let resourceTags = document.getElementsByClassName("resource");
+
+                let directionTags = document.getElementsByClassName("change-direction");
+                for (const index in directionTags) {
+                    if (directionTags[index].nodeName === "DIV") {
+                        directionTags[index].style.direction = currentDirection;
+                    }
+                }
+
+                for (const indx in resourceTags) {
+                    if (!parseInt(indx) && parseInt(indx) !== 0) continue;
+                    let key = resourceTags[indx].getAttribute('name');
+                    let value = currentResource[key];
+                    if (value) {
+                        if (resourceTags[indx].nodeName === "DIV" || resourceTags[indx].nodeName === "SPAN"
+                            || resourceTags[indx].nodeName === "BUTTON" || resourceTags[indx].nodeName === "A") {
+                            resourceTags[indx].innerHTML = value;
+                        }
+                        else {
+                            resourceTags[indx].placeholder = value;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+
+        const send = async () => {
+
+            let currentResource = currentCulture === "fa" ? resourcesFa : resourcesEn;
+            let myToastElement = document.getElementById('messageToast');
+            let toast = bootstrap.Toast.getOrCreateInstance(myToastElement); //inizialize it
+            let header, body;
+            if (myToastElement) {
+                header = myToastElement.getElementsByClassName("header-text")[0];
+                body = myToastElement.getElementsByClassName("toast-body")[0];
+            }
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            if (!name) {
+                if (header)
+                    header.textContent = currentResource["error"];
+                if (body)
+                    body.textContent = currentResource["nameRequired"];
+
+                myToastElement.classList.remove("bg-success");
+                myToastElement.classList.add("bg-danger");
+                toast.show();
+                return;
+            }
+            if (!email) {
+                if (header)
+                    header.textContent = currentResource["error"];
+                if (body)
+                    body.textContent = currentResource["emailRequired"];
+
+                myToastElement.classList.remove("bg-success");
+                myToastElement.classList.add("bg-danger");
+                toast.show();
+                return;
+            }
+            if (!message) {
+                if (header)
+                    header.textContent = currentResource["error"];
+                if (body)
+                    body.textContent = currentResource["messageRequired"];
+
+                myToastElement.classList.remove("bg-success");
+                myToastElement.classList.add("bg-danger");
+                toast.show();
+                return;
+            }
+
+            const model = {
+                "name": name,
+                "email": email,
+                "messageText": message
+            }
+
+            const request = new XMLHttpRequest();
+            request.open("POST", "https://auth-hub.dpnaco.com/Karabot/sendMessage", true);
+            request.setRequestHeader("Content-type", "application/json");
+            request.send(JSON.stringify(model));
+            request.onload = () => {
+                if (request.status == 200) {
+                    if (header)
+                        header.textContent = currentResource["message"];
+                    if (body)
+                        body.textContent = currentResource["successMessage"];
+
+                    myToastElement.classList.remove("bg-danger");
+                    myToastElement.classList.add("bg-success");
+                    toast.show();
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                } else {
+                    if (header)
+                        header.textContent = currentResource["error"];
+                    if (body)
+                        body.textContent = currentResource["failedMessage"];
+
+                    myToastElement.classList.remove("bg-success");
+                    myToastElement.classList.add("bg-danger");
+                    toast.show();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

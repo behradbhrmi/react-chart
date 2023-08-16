@@ -1,0 +1,193 @@
+﻿/*=====================================================
+    
+    TABLETS PORTRAIT & SMARTPHONES LANDSCAPE
+
+=====================================================*/
+
+@media all and (min-width: 481px) {
+	
+/* GLOBAL STYLES */
+/* HEADER */
+
+.search-box input.search-box-text {
+	width: 300px !important;
+}
+.ui-autocomplete.ui-menu.ui-widget.ui-widget-content {
+	width: 336px !important; /*txtfield + button*/
+}
+.eu-cookie-bar-notification {
+    padding: 20px 75px;
+}
+.eu-cookie-bar-notification button,
+.eu-cookie-bar-notification a {
+    margin: 0 5px;
+}
+/* HEADER MENU */
+/* FOOTER */
+
+.footer-upper-block{
+    float: right;
+}
+
+/* LEFT/RIGHT COLUMN */
+/* CATEGORY PAGE & GRIDS */
+
+.home-page-bottom > * {
+    float: right;
+    margin: 0 2% 2% 0;
+}
+.home-page-banners {
+    padding: 14px;
+}
+
+.news-list-homepage .news-items .news-item {
+    float: right;
+    margin: 0 2% 2% 0;
+}
+.news-list-homepage .news-items .news-item.one {
+    width: 70%;
+    float: none;
+    margin: 0 auto !important;
+}
+
+/*.poll {
+    float: left;
+    margin: 0 0 2% 2%;
+}*/
+
+.home-page-category-grid .item-box, 
+.sub-category-grid .item-box,
+.item-box {
+    float: right;
+    margin: 0 3% 3% 0;
+    max-width: none;
+}
+
+/* PRODUCT PAGE */
+
+.attributes,
+.rental-attributes {
+    overflow: hidden;
+    text-align: right;
+}
+.attributes dl,
+.rental-attributes .attribute-item {
+    float: right;
+    width: 48%;
+    margin: 0 4% 4% 0;
+}
+.attributes dl:nth-child(2n+1),
+.rental-attributes .attribute-item:nth-child(2n+1) {
+    clear: both;
+    margin-right: 0;
+}
+.attributes dl:only-child,
+.rental-attributes .attribute-item:only-child{
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+.attributes select{
+    width: 100%;
+}
+
+
+/* QUICK TABS */
+/* ATTRIBUTES */
+/* GIFT CARD */
+/* REVIEW PAGE */
+/* WISHLIST PAGE */
+
+/* PASSWORD PROTECTION */
+.enter-password-form input {
+	width: 300px !important;
+}
+
+/* CONTACT PAGE & EMAILaFRIEND */
+/* REGISTRATION, LOGIN, MY ACCOUNT */
+
+/* SHOPPING CART & CHECKOUT */
+
+.cart-collaterals .coupon-code button {
+    font-size: 14px;
+}
+.order-review-data {
+	display: table;
+	width: 100%;
+	margin: 0 0 30px;
+    text-align: center;
+}
+.order-review-data ul {
+	display: table-cell;
+}
+.order-details-area td {
+	float: none;
+	width: auto;
+}
+
+.shipment-details-page .shipment-overview > ul {
+    float: right;
+    width: 48%;
+    margin: 0 1% !important;
+}
+
+/* SEARCH PAGE & SITEMAP */
+/* BLOG & NEWS */
+
+/* Topic Page & Profile Page */
+
+/* FORUM & PROFILE */
+
+.forums-main-page .search-box.forum-search-box-text,
+.forum-search-text {
+	width: 300px !important;
+}
+
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+
+/* RESPONSIVE GRIDS */
+
+.footer-upper-block{
+	width: 49%; /*two per row*/
+	margin: 0 2% 20px 0;
+}
+.footer-upper-block:nth-child(2n+1) {
+	clear: both;
+	margin-right: 0;
+}
+
+.item-box {
+	width: 48%; /*two per row*/
+}
+.item-box:nth-child(2n+1) {
+	clear: both;
+	margin-right: 0;
+}
+
+.news-list-homepage .news-items .news-item{
+    width: 49%; /*two per row*/
+}
+.news-list-homepage .news-items .news-item:nth-child(2n+1) {
+	clear: both;
+	margin-right: 0;
+}
+
+/*.poll{
+    width: 49%;
+}
+.poll:nth-child(2n+1){
+	clear: both;
+	margin-left: 0;
+}*/
+
+.home-page-bottom > *{
+    width: 49%; /*two per row*/
+}
+.home-page-bottom > *:nth-child(2n+1) {
+    clear: both;
+	margin-right: 0;
+}
+
+}

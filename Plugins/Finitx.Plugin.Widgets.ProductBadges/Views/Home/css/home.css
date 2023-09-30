@@ -592,7 +592,41 @@ input, textarea {
     text-decoration: none;
 }
 
-        /* Change the link color to #111 (black) on hover */
+/* Change the link color to #111 (black) on hover */
 .container-fluid li a:hover {
     background-color: #111;
+}
+
+.gradient-button {
+    background-image: linear-gradient(to left, #183fbf, #6cc5fc);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "IRANSansX_Regular";
+}
+
+.faq .accordion {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.faq-title {
+    font-family: "IRANSansX_Regular";
+}
+
+.layout {
+    width: felx;
+    margin: auto;
+}
+
+.accordion {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to left, #183fbf, #6cc5fc);
+    color: white;
+    font-family: "IRANSansX_Regular";
+    border-radius: 10px;
 }

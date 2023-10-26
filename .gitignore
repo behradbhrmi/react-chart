@@ -396,3 +396,4 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 /Presentation/Nop.Web/Plugins
+/Presentation/Nop.Web/wwwroot/images/thumbs
